@@ -1,0 +1,16 @@
+Exercise collection:
+If db interface can query only based on one key (and no regex ability) (eg: get me all 2021-12-19 exercises):
+workout|2021-12-19 : { exercises: [ pullup: {}, inverted-row: {} ] }
+workout|2021-12-21 : { exercises: [ pullup: {}, inverted-row: {} ] }
+
+If db interface can query based on multiple keys (or one key with regex ability) (eg: get me all 2021-12-19 exercises, get me all pull-up exercises):
+workout|2021-12-19|pull-up      : { metrics: [], sets: [] }
+workout|2021-12-19|inverted-row : { metrics: [], sets: [] }
+workout|2021-12-21|pull-up      : { metrics: [], sets: [] }
+workout|2021-12-21|inverted-row : { metrics: [], sets: [] }
+
+---
+
+Exercise template collection:
+exercise-template|pull-up      : { ... }
+exercise-template|inverted-row : { ... }
