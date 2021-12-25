@@ -1,11 +1,9 @@
 <script lang="ts">
     import Workout from "./Workout.svelte";
-	export let name: string;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Sessions</h1>
     <Workout />
 </main>
 

@@ -1,13 +1,20 @@
 <script lang="ts">
+    import type { Exercise as ExerciseType } from './types';
     import Exercise from './Exercise.svelte';
+
+    let exercises: ExerciseType[] = [
+        { name: 'Pull up' },
+        { name: 'Squat' }
+    ];
 </script>
 
 <section>
     <ul>
-        <li>
-            <Exercise name="Pull up" />
-            <Exercise name="Squat" />
-        </li>
+        {#each exercises as exercise}
+            <li>
+                <Exercise name="{exercise.name}" />
+            </li>
+        {/each}
     </ul>
 </section>
 
