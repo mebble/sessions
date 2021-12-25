@@ -10,3 +10,10 @@
         </li>
     </ul>
 </section>
+
+<style>
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+</style>

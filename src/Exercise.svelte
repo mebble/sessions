@@ -42,3 +42,18 @@
     </table>
     <button on:click={addSet}>Add set</button>
 </section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    input {
+        width: 5ch;
+    }
+</style>
