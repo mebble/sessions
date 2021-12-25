@@ -1,3 +1,21 @@
+<script lang="ts">
+    import type { ExerciseSet } from './types';
+
+    let sets: ExerciseSet[] = [
+        { weight: 'BW+5', reps: 999, done: true },
+        { weight: 'BW+5', reps: 5, done: false },
+    ];
+
+    function addSet() {
+        const lastSet = sets[sets.length - 1];
+        console.log(lastSet)
+        sets = [
+            ...sets,
+            { weight: lastSet.weight, reps: lastSet.reps, done: false }
+        ]
+    }
+</script>
+
 <section>
     <h2>Pull up</h2>
     <table>
@@ -10,19 +28,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><input type="text" name="set-1-weight" value="BW+5">kg</td>
-                <td><input type="number" name="set-1-reps" value="999"></td>
-                <td><input type="checkbox" name="set-1-done" checked></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td><input type="text" name="set-2-weight" value="BW+5">kg</td>
-                <td><input type="number" name="set-2-reps" value="5"></td>
-                <td><input type="checkbox" name="set-2-done"></td>
-            </tr>
+            {#each sets as set, i}
+                <tr>
+                    <th scope="row">{i+1}</th>
+                    <td><input type="text" name="set-{i+1}-weight" bind:value="{set.weight}">kg</td>
+                    <td><input type="number" name="set-{i+1}-reps" bind:value="{set.reps}"></td>
+                    <td><input type="checkbox" name="set-{i+1}-done" bind:checked="{set.done}"></td>
+                </tr>
+            {/each}
         </tbody>
     </table>
-    <button>Add set</button>
+    <button on:click={addSet}>Add set</button>
 </section>
