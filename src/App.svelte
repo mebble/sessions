@@ -1,19 +1,12 @@
 <script lang="ts">
-    import Exercise from "./Exercise.svelte";
+    import Workout from "./Workout.svelte";
 	export let name: string;
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-    <div>
-        <ul>
-            <li>
-                <Exercise />
-            </li>
-        </ul>
-    </div>
-
+    <Workout />
 </main>
 
 <style>

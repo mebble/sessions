@@ -1,6 +1,8 @@
 <script lang="ts">
     import type { ExerciseSet } from './types';
 
+    export let name: string;
+
     let sets: ExerciseSet[] = [
         { weight: 'BW+5', reps: 999, done: true },
         { weight: 'BW+5', reps: 5, done: false },
@@ -17,7 +19,7 @@
 </script>
 
 <section>
-    <h2>Pull up</h2>
+    <h2>{name}</h2>
     <table>
         <thead>
             <tr>
