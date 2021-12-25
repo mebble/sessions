@@ -19,7 +19,7 @@
 </script>
 
 <section>
-    <h2>{name}</h2>
+    <h3>{name}</h3>
     <table>
         <thead>
             <tr>
@@ -49,7 +49,7 @@
         flex-direction: column;
     }
 
-    h2 {
+    h3 {
         text-align: left;
     }
 
