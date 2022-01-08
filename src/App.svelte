@@ -27,15 +27,18 @@
 
     ul {
         display: flex;
-        width: 100vw;
+        width: 85vw;
+        max-width: 500px;
+        margin: auto;
         overflow-x: scroll;
+        /* https://css-tricks.com/practical-css-scroll-snapping/#example-2-horizontal-slider */
         scroll-snap-type: x mandatory;
     }
 
     ul li {
         scroll-snap-align: start;
-        width: 100vw;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        /* https://stackoverflow.com/a/30684798 */
+        flex-shrink: 0;
+        width: 100%;
     }
 </style>
